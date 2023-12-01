@@ -35,6 +35,9 @@ class PokemonAdapter(private val pokemonList: List<Pokemon>) :
         holder.pokemonWeight.text = currentItem.peso
         holder.pokemonNumber.text = currentItem.numeroIdentificacion.toString()
 
+        // Establecer la imagen del Pokémon en el ImageView
+        holder.pokemonImage.setImageResource(currentItem.imagen)
+
         holder.itemView.setOnClickListener {
             listener?.onItemClick(position)
         }
