@@ -3,9 +3,12 @@ package com.example.actrecyclerview
 import android.annotation.SuppressLint
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.view.View
+import android.widget.ImageView
 import android.widget.Toast
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
+
 
 class MainActivity : AppCompatActivity() {
 
@@ -18,10 +21,16 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
+
         pokemonList = ArrayList()
-        // Agregar datos de Pokémon (reemplaza con tus datos)
-        pokemonList.add(Pokemon("Pikachu", R.drawable.pikachu, "0.4 m", "6.0 kg", 25))
-        // Añade más Pokémon aquí...
+
+        pokemonList.add(Pokemon("Pikachu", R.drawable.pikachu, "0.4 m", "6.0 kg", 1))
+        pokemonList.add(Pokemon("Eevee", R.drawable.eevee, "0.5 m", "7.0 kg", 25))
+        pokemonList.add(Pokemon("Bulbasur", R.drawable.bulbasur, "0.75 m", "10.0 kg", 12))
+        pokemonList.add(Pokemon("Charizard", R.drawable.charizard, "2 m", "60.0 kg", 5))
+        pokemonList.add(Pokemon("Lucario", R.drawable.lucario, "1.4 m", "45.0 kg", 38))
+
+
 
         // Configurar RecyclerView
         recyclerView = findViewById(R.id.pokemon_recyclerView)
@@ -35,9 +44,10 @@ class MainActivity : AppCompatActivity() {
             }
 
             override fun onImageClick(position: Int) {
-                // Aquí abrirías otra página para ampliar la imagen
-                // Puedes utilizar un Intent para abrir una nueva actividad
+                TODO("Not yet implemented")
             }
+
         })
     }
+
 }
